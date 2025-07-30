@@ -20,12 +20,68 @@ body {
   color: #fff;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
+
+}
+
+/* home page text */
+#home h1 {
+  max-width: 600px;   
+  padding: 20px 30px; 
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+}
+
+/* about page text */
+#about h2 {
+  max-width: 600px;   
+  padding: 20px 30px; 
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+}
+
+
+
+
+.section {
+  height: 100vh; /* section per screen*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically center content */
+  align-items: center;      /* horizontally center content */
+  padding: 0 20px;
+  color: white;
+
+  scroll-snap-align: start;
+}
+
+
+.section p,
+.section ul {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li::before {
+  content: "• ";
+  color: #00aaff;
 }
 
 
 
 
 
+/* sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -67,13 +123,9 @@ body {
   transition: 0.3s ease;
 }
 
-.sidebar li.active a,
-.sidebar a:hover {
+.sidebar li.active a {
   color: #82b8ea;
 }
-
-
-
 
 
 
@@ -93,21 +145,33 @@ body {
   gap: 40px; 
 }
 
-.text-box {
-  text-align: right;
+/* social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-.text-box h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-  color: white;
+.social-icons a {
+  color: #62bbee; 
+  font-size: 40px;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.text-box p {
-  font-size: 20px;
-  color: #ccc;
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #00aaff; 
 }
 
+
+
+
+
+
+
+
+/* size of headshot image */
 .image-box img {
   width: 260px;
   height: 260px;
@@ -120,7 +184,7 @@ body {
 
 
 
-
+/* ☰ */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -132,7 +196,7 @@ body {
   display: none; /* hidden on desktop, shown on mobile */
 }
 
-/* Show the toggle on small screens */
+/* display on mobile devices */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -153,5 +217,46 @@ body {
 
   .center-wrapper {
     padding-left: 0;
+    height: auto;
+    padding: 40px 20px;
   }
+    .center-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .image-box img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .text-box h1 {
+    font-size: 32px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
+
+
+
 }
+
+
+.resume-preview {
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #00aaff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.resume-preview:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+

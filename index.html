@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randys Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+
+
 </head>
 
 
@@ -23,34 +27,111 @@
     </script>
 
 
-    <div class= "sidebar">   
-        <ul>
-        <li class="active"><a href="#home">Home</a></li>
+    <div class="sidebar">   
+    <ul>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-        
-        </ul>
+        <li><a href="#resume">Resume</a></li>
+   
+    </ul>
     </div>
 
 
+    <section id="home" class="section">
     <div class="center-wrapper">
         <div class="center-content">
             <div class="text-box">
-            <h1>Randy Pham</h1>
-            <p>Web Developer</p>
+            <h1>I'm Randy, an aspiring software engineer driven to adapt, learn, and create meaningful solutions.</h1>
+           
             </div>
             <div class="image-box">
             <img src="images/headshot.png" alt="Profile photo" />
             </div>
         </div>
     </div>
+    </section> 
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p> I'm a recent CS graduate from the University of California, Riverside with a B.S in Computer Science. 
+        <div class="social-icons">
+            <a href="https://github.com/rpham322" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/randypham322" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rpham322@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+
+
+
+
+        </p>
+    </section>  
+    
+    
+    <section id="projects" class="section">
+    <h3>Projects</h3>
+    <ul>
+        <li> Puzzle Solver using Heuristics</li>
+        <li> Feature Selection Optimizer</li>
+        <li> Eight Tile Puzzle Solver</li>
+        <li> Movie Recommender System</li>
+        <li> Stock Analysis Web App with Apache Spark</li>
+        <li> VR Recycling Game in Unity</li>
+     
+    </ul>
+    </section>
+   
+    <section id="resume" class="section">
+    <h4>Resume</h4>
+    <p>Click the preview below to download my resume:</p>
+    <a href="assets/Randys_Resume.pdf" download>
+        <img src="images/resume_image.png" alt="Resume Preview" class="resume-preview" />
+    </a>
+    </section>
+
+
+
+
+
+    <!-- script to update sidebar to dynamically update with cur page-->
+    <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".sidebar a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+        }
+        });
+
+        navLinks.forEach(link => {
+        link.parentElement.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.parentElement.classList.add("active");
+        }
+        });
+    });
+    </script>
+
+
+
+
+
+
+
+
 
 
 </div>
 <body>
 
+    
 
 
 </html>
