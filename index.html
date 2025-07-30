@@ -5,26 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randys Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
-
-
 </head>
 
 
 
 <body>
-<div id= "header">
-    <div class= "container">   
-        <nav>
-            <a href="#" class="logo-text">Randy Pham</a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+<div id= "layout">
+    
+    <!-- ☰ icon -->
+    <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+
+    <!-- script to toggle sidebar on mobile -->
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+
+    <div class= "sidebar">   
+        <ul>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        
+        </ul>
     </div>
+
+
+    <div class="center-wrapper">
+        <div class="center-content">
+            <div class="text-box">
+            <h1>Randy Pham</h1>
+            <p>Web Developer</p>
+            </div>
+            <div class="image-box">
+            <img src="images/headshot.png" alt="Profile photo" />
+            </div>
+        </div>
+    </div>
+
+
 </div>
 <body>
 
