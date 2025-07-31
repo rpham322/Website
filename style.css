@@ -290,11 +290,7 @@ body {
   color: #333;
 }
 
-.project-card h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
+
 
 .project-card p {
   font-size: 14px;
@@ -384,10 +380,7 @@ body {
     padding: 16px;
     color: #333;
   }
-   .project-card h4{
-    padding: 16px;
-    color: #333;
-  }
+
 
   .project-card p {
     font-size: 14px;
